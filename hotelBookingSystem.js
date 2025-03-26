@@ -24,6 +24,11 @@ function isRoomOccupiedDuringDates(roomNo, checkIn, checkOut) {
   });
 }
 
+// Root welcome route
+app.get("/", (req, res) => {
+  res.send("🏨 Hotel Room Booking API is running.");
+});
+
 // 1. Book a room
 app.post("/book", (req, res) => {
   const { name, email, phone, checkIn, checkOut } = req.body;
